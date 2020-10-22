@@ -5,4 +5,11 @@ class SecretsController < ApplicationController
       redirect_to '/login'
     end
   end
+  
+  private
+
+
+  def require_login
+    return redirect_to root_path unless session.include?(:name)
+  end
 end
