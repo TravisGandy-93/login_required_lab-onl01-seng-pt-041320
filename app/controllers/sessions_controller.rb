@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
-  def current_user
-  end
-  
+ 
   def new
     redirect_to '/login'
   end
